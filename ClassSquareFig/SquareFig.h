@@ -2,15 +2,15 @@
 #include <string>
 #include <stdexcept>
 
+//Фигура квадрат
 class SquareFig
 {
 private:
-	float P, S;
-	float len_side;;
-	float a, b, c, d;
-	// ..
-	// ...
-
+	float P, S;			// Периметр и площадь
+	float len_side;		// Длина стороны
+	float a, b, c, d;   // Координаты 2-х точек для нахождения стороны
+	
+	
 public:
 	// конструктор (инициализирует поля)
 	SquareFig();
@@ -28,6 +28,7 @@ public:
 	/// Нахождение площади
 	float area();
 
+	/// Перевод в строку
 	std::string to_string();
 };
 

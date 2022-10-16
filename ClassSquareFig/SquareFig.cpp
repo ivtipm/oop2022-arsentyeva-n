@@ -52,7 +52,7 @@ float SquareFig::area() {
 	return S;
 }
 
-/// 
+/// Перевод в строку
 std::string SquareFig::to_string() {
 	return "lengths = " + std::to_string(len_side) + "; P = " + std::to_string(P) + " cm ; S = " + std::to_string(S) + " cm2";
 }

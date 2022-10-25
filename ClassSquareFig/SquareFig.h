@@ -6,9 +6,7 @@
 class SquareFig
 {
 private:
-	float P, S;			// Периметр и площадь
-	float len_side;		// Длина стороны
-	float a, b, c, d;   // Координаты 2-х точек для нахождения стороны
+	float a1, a2, b1, b2;   // Координаты 2-х точек для нахождения стороны
 	
 	
 public:
@@ -28,7 +26,7 @@ public:
 	/// Нахождение площади
 	float area();
 
-	/// Перевод в строку
-	std::string to_string();
+	/*/// Перевод в строку
+	std::string to_string() const;*/
 };
 

@@ -13,7 +13,7 @@ int main(int argc, char const* argv[])
 		l1.side_lengths();
 		l1.perimeter();
 		l1.area();
-		cout << l1.to_string();
+		//cout << l1.to_string();
 	}
 	// Вывод ошибки для пользователя
 	catch (invalid_argument e) {  						

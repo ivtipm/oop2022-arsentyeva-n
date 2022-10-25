@@ -26,7 +26,7 @@ public:
 	/// Нахождение площади
 	float area();
 
-	/*/// Перевод в строку
-	std::string to_string() const;*/
+	/// Перевод в строку
+	std::string to_string();
 };
 

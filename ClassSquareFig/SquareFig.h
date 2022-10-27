@@ -6,13 +6,13 @@
 class SquareFig
 {
 private:
-	float a1, a2, b1, b2;   //  оординаты 2-х точек дл€ нахождени€ стороны
-	
-	
+	float a1, a2, b1, b2, c1, c2, d1, d2;   //  оординаты 2-х точек дл€ нахождени€ стороны
+
+
 public:
 	// конструктор (инициализирует пол€)
 	SquareFig();
-
+	SquareFig(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
 
 	/// «адать координаты
 	void set_coordinates(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);

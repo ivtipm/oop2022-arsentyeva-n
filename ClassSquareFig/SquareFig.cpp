@@ -1,10 +1,10 @@
 // @author: Natalya Arsentyeva
 #include "SquareFig.h"
 #include "math.h"
-#define _USE_MATH_DEFINES // вкл. математические константы
+#define _USE_MATH_DEFINES // ГўГЄГ«. Г¬Г ГІГҐГ¬Г ГІГЁГ·ГҐГ±ГЄГЁГҐ ГЄГ®Г­Г±ГІГ Г­ГІГ»
 
 
-/// Конструктор по умолчанию
+/// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
 SquareFig::SquareFig() {
 	ax = 0;
 	ay = 0;
@@ -22,18 +22,18 @@ SquareFig::SquareFig(float x1, float y1, float x2, float y2, float x3, float y3,
 }
 
 
-/// Задать координаты
+/// Г‡Г Г¤Г ГІГј ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ»
 void SquareFig::set_coordinates(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4) {
 	float s1, s2, s3, s4, d1, d2;
-	// Стороны
+	// Г‘ГІГ®Г°Г®Г­Г»
 	s1 = pow((x2 - x1), 2) + pow((y2 - y1), 2);
 	s2 = pow((x3 - x2), 2) + pow((y3 - y2), 2);
 	s3 = pow((x4 - x3), 2) + pow((y4 - y3), 2);
 	s4 = pow((x1 - x4), 2) + pow((y1 - y4), 2);
-	// Диагонали
+	// Г„ГЁГ ГЈГ®Г­Г Г«ГЁ
 	d1 = pow((x3 - x1), 2) + pow((y3 - y1), 2);
 	d2 = pow((x4 - x2), 2) + pow((y4 - y2), 2);
-	// Сравнение длин сторон и диагоналей
+	// Г‘Г°Г ГўГ­ГҐГ­ГЁГҐ Г¤Г«ГЁГ­ Г±ГІГ®Г°Г®Г­ ГЁ Г¤ГЁГ ГЈГ®Г­Г Г«ГҐГ©
 	if ((fabs(s1 - s2) > FLT_EPSILON) || (fabs(s1 - s3) > FLT_EPSILON) || (fabs(s1 - s4) > FLT_EPSILON) || (fabs(d1 - d2) > FLT_EPSILON)) throw std::invalid_argument("Error: sides are set incorrectly, square does not exist");
 	ax = x1;
 	ay = y1;
@@ -45,22 +45,22 @@ void SquareFig::set_coordinates(float x1, float y1, float x2, float y2, float x3
 	dy = y4;
 }
 
-/// Нахождение длины одной стороны
+/// ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ Г¤Г«ГЁГ­Г» Г®Г¤Г­Г®Г© Г±ГІГ®Г°Г®Г­Г»
 float SquareFig::side_lengths() const {
 	return sqrt((pow((bx - ax), 2)) + pow((by - ay), 2));
 }
 
-/// Нахождение периметра
+/// ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ ГЇГҐГ°ГЁГ¬ГҐГІГ°Г 
 float SquareFig::perimeter() const {
 	return sqrt((pow((bx - ax), 2)) + pow((by - ay), 2)) * 4;
 }
 
-/// Нахождение площади
+/// ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ ГЇГ«Г®Г№Г Г¤ГЁ
 float SquareFig::area() const {
 	return pow(sqrt((pow((bx - ax), 2)) + pow((by - ay), 2)), 2);
 }
 
-/// Перевод в строку
+/// ГЏГҐГ°ГҐГўГ®Г¤ Гў Г±ГІГ°Г®ГЄГі
 std::string SquareFig::to_string() const {
 	return "lengths side = " + std::to_string(side_lengths()) + " cm; P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2";
 }

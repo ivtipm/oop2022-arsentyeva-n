@@ -51,17 +51,17 @@ float SquareFig::side_lengths() const {
 }
 
 /// Нахождение периметра
-float SquareFig::perimeter() const{
+float SquareFig::perimeter() const {
 	return sqrt((pow((bx - ax), 2)) + pow((by - ay), 2)) * 4;
 }
 
 /// Нахождение площади
-float SquareFig::area() const{
+float SquareFig::area() const {
 	return pow(sqrt((pow((bx - ax), 2)) + pow((by - ay), 2)), 2);
 }
 
 /// Перевод в строку
-std::string SquareFig::to_string() const{
+std::string SquareFig::to_string() const {
 	return "lengths side = " + std::to_string(side_lengths()) + " cm; P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2";
 }
 

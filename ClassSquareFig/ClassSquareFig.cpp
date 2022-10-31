@@ -17,7 +17,7 @@ int main(int argc, char const* argv[])
 		cout << l3.to_string() << endl;
 	}
 	// Вывод ошибки для пользователя
-	catch (invalid_argument e) {  						
+	catch (invalid_argument e) {
 		cout << e.what();
 	}
 

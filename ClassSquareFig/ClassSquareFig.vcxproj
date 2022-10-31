@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c015c837-ae87-4e31-a629-c5029503a3bc}</ProjectGuid>
+    <ProjectGuid>{9b20a210-ca37-445d-82cd-2233d36af2f2}</ProjectGuid>
     <RootNamespace>ClassSquareFig</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

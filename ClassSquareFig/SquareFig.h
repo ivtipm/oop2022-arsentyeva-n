@@ -1,32 +1,39 @@
+// @author: Natalya Arsentyeva
 #pragma once
 #include <string>
 #include <stdexcept>
 
-//Фигура квадрат
+using namespace std;
+
+
+/// Фигура квадрат
 class SquareFig
 {
 private:
-	float a1, a2, b1, b2, c1, c2, d1, d2;   // Координаты 2-х точек для нахождения стороны
+	// Координаты точки A(ax,ay), аналогично B,C,D
+	float ax, ay, bx, by, cx, cy, dx, dy;   
 
 
 public:
-	// конструктор (инициализирует поля)
+	// Конструктор (инициализирует поля)
 	SquareFig();
 	SquareFig(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
+
 
 	/// Задать координаты
 	void set_coordinates(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
 
 	/// Нахождение длины одной стороны
-	float side_lengths();
+	float side_lengths() const;	
 
 	/// Нахождение периметра
-	float perimeter();
+	float perimeter() const;			
 
 	/// Нахождение площади
-	float area();
+	float area() const;
 
 	/// Перевод в строку
-	std::string to_string();
+	std::string to_string() const;
 };
 
+//float check(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4) const;

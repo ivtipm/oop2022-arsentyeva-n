@@ -1,29 +1,23 @@
+// @author: Natalya Arsentyeva
 #include "SquareFig.h"
 #include "math.h"
 #define _USE_MATH_DEFINES // вкл. математические константы
 
 
 SquareFig::SquareFig() {
-	a1 = 0;
-	a2 = 0;
-	b1 = 0;
-	b2 = 0;
-	c1 = 0;
-	c2 = 0;
-	d1 = 0;
-	d2 = 0;
+	ax = 0;
+	ay = 0;
+	bx = 0;
+	by = 0;
+	cx = 0;
+	cy = 0;
+	dx = 0;
+	dy = 0;
 }
 
 
 SquareFig::SquareFig(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4) {
-	a1 = x1;
-	a2 = y1;
-	b1 = x2;
-	b2 = y2;
-	c1 = x3;
-	c2 = y3;
-	d1 = x4;
-	d2 = y4;
+	set_coordinates(x1, y1, x2, y2, x3, y3, x4, y4);
 }
 
 
@@ -40,33 +34,33 @@ void SquareFig::set_coordinates(float x1, float y1, float x2, float y2, float x3
 	d2 = pow((x4 - x2), 2) + pow((y4 - y2), 2);
 	// Сравнение длин сторон и диагоналей
 	if ((fabs(s1 - s2) > FLT_EPSILON) || (fabs(s1 - s3) > FLT_EPSILON) || (fabs(s1 - s4) > FLT_EPSILON) || (fabs(d1 - d2) > FLT_EPSILON)) throw std::invalid_argument("Error: sides are set incorrectly, square does not exist");
-	a1 = x1;
-	a2 = y1;
-	b1 = x2;
-	b2 = y2;
-	c1 = x3;
-	c2 = y3;
-	d1 = x4;
-	d2 = y4;
+	ax = x1;
+	ay = y1;
+	bx = x2;
+	by = y2;
+	cx = x3;
+	cy = y3;
+	dx = x4;
+	dy = y4;
 }
 
 /// Нахождение длины одной стороны
-float SquareFig::side_lengths() {
-	return sqrt((pow((b1 - a1), 2)) + pow((b2 - a2), 2));
+float SquareFig::side_lengths() const {
+	return sqrt((pow((bx - ax), 2)) + pow((by - ay), 2));
 }
 
 /// Нахождение периметра
-float SquareFig::perimeter() {
-	return sqrt((pow((b1 - a1), 2)) + pow((b2 - a2), 2)) * 4;
+float SquareFig::perimeter() const{
+	return sqrt((pow((bx - ax), 2)) + pow((by - ay), 2)) * 4;
 }
 
 /// Нахождение площади
-float SquareFig::area() {
-	return pow(sqrt((pow((b1 - a1), 2)) + pow((b2 - a2), 2)), 2);
+float SquareFig::area() const{
+	return pow(sqrt((pow((bx - ax), 2)) + pow((by - ay), 2)), 2);
 }
 
 /// Перевод в строку
-std::string SquareFig::to_string() {
+std::string SquareFig::to_string() const{
 	return "lengths side = " + std::to_string(side_lengths()) + " cm; P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2";
 }
 

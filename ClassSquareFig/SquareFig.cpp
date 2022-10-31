@@ -4,6 +4,7 @@
 #define _USE_MATH_DEFINES // вкл. математические константы
 
 
+/// Конструктор по умолчанию
 SquareFig::SquareFig() {
 	ax = 0;
 	ay = 0;

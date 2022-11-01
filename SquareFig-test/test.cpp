@@ -11,7 +11,6 @@ TEST(TestClassSquareFig, TestSideLen) {
 	EXPECT_EQ(f2.side_lengths(), 2.5);
 	//SquareFig f3(1, 3, 2.5, 3, 2.5, 0.5, 5, 0.5);
 	//EXPECT_EQ(f3.side_lengths(), invalid_argument("Error: sides are set incorrectly, square does not exist"));
-
 	// todo
 }
 

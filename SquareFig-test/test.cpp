@@ -2,7 +2,8 @@
 #include "pch.h"
 #include "../ClassSquareFig/SquareFig.h"
 
-/// Тест на задание сторон
+
+/// Тест на вычисление сторон
 TEST(TestClassSquareFig, TestSideLen) {
 	SquareFig f1(2, 2, 2, 6, -2, 6, -2, 2);
 	EXPECT_EQ(f1.side_lengths(), 4);

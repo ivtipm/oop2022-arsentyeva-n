@@ -9,12 +9,14 @@ using namespace std;
 /// Фигура квадрат
 class SquareFig
 {
-private:
-	// Координаты точки A(ax,ay), аналогично B, C, D
-	float ax, ay, bx, by, cx, cy, dx, dy;
-
+//private:
+//	// Координаты точки A(ax,ay), аналогично B, C, D
+//	float ax, ay, bx, by, cx, cy, dx, dy;
 
 public:
+	// Координаты точки A(ax,ay), аналогично B, C, D
+	float ax, ay, bx, by, cx, cy, dx, dy;
+ 
 	// Конструктор (инициализирует поля)
 	SquareFig();
 	SquareFig(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);

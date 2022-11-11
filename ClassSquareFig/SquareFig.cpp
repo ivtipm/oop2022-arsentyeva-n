@@ -1,6 +1,7 @@
 // @author: Natalya Arsentyeva
 #include "SquareFig.h"
 #include "math.h"
+#include <iostream>
 #define _USE_MATH_DEFINES // Вкл. мат. константы
 
 
@@ -43,6 +44,12 @@ void SquareFig::set_coordinates(float x1, float y1, float x2, float y2, float x3
 	cy = y3;
 	dx = x4;
 	dy = y4;
+}
+
+///Вывести координаты
+void SquareFig::get_coordinates() const {
+	cout <<"A(" << ax << "," << ay << "); " << "B(" << bx << "," << by << ") " << "\n";
+	cout <<"C(" << cx << "," << cy << "); " << "D(" << dx << "," << dy << ") " << "\n";
 }
 
 /// Нахождение стороны

@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassSquareFig", "ClassSqua
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SquareFig-test", "..\SquareFig-test\SquareFig-test.vcxproj", "{62451902-6FCD-4DE1-9F58-0C5B76DE7949}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{CFB85EB2-5F5A-4E01-A211-CFFE96B7ECA7}"
+	ProjectSection(SolutionItems) = preProject
+		objects.cpp = objects.cpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

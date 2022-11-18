@@ -2,22 +2,22 @@
 #include "SquareFig.h"
 
 
-/// Динамическое создание объекта
+/// Р”РёРЅР°РјРёС‡РµСЃРєРѕРµ СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р°
 void create_object() {
-	SquareFig* Square1 = new SquareFig(); // Square1 - указатель на объект
+	SquareFig* Square1 = new SquareFig(); // Square1 - СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РѕР±СЉРµРєС‚
 
-	// обращение к полям
+	// РѕР±СЂР°С‰РµРЅРёРµ Рє РїРѕР»СЏРј
 	Square1->set_coordinates(2, 2, 2, 6, -2, 6, -2, 2);
 	float S = Square1->area();
 	cout << Square1->to_string() << endl;
 
-	// после динамического создания объектов нужно
-	// освободить занимаемую ими память
+	// РїРѕСЃР»Рµ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚РѕРІ РЅСѓР¶РЅРѕ
+	// РѕСЃРІРѕР±РѕРґРёС‚СЊ Р·Р°РЅРёРјР°РµРјСѓСЋ РёРјРё РїР°РјСЏС‚СЊ
 	delete Square1;
 }
 
 
-/// Набор из статических объектов
+/// РќР°Р±РѕСЂ РёР· СЃС‚Р°С‚РёС‡РµСЃРєРёС… РѕР±СЉРµРєС‚РѕРІ
 void objects_array(const unsigned n, SquareFig* Squares) {
 	for (unsigned i = 0; i < n; i++) {
 		float ax, ay, bx, by, cx, cy, dx, dy;
@@ -30,22 +30,22 @@ void objects_array(const unsigned n, SquareFig* Squares) {
 		cy = by;
 		dx = cx;
 		dy = ay;
-		Squares[i].set_coordinates(ax, ay, bx, by, cx, cy, dx, dy); // Создание объекта
-		cout << Squares[i].to_string_coord() << endl; //Вывод
+		Squares[i].set_coordinates(ax, ay, bx, by, cx, cy, dx, dy); // РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р°
+		cout << Squares[i].to_string_coord() << endl; //Р’С‹РІРѕРґ
 	}
 }
 
 
-/// Запись отдельного объекта в заданную ячейку из массива в отдельную переменную и вывод площади
+/// Р—Р°РїРёСЃСЊ РѕС‚РґРµР»СЊРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РІ Р·Р°РґР°РЅРЅСѓСЋ СЏС‡РµР№РєСѓ РёР· РјР°СЃСЃРёРІР° РІ РѕС‚РґРµР»СЊРЅСѓСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ Рё РІС‹РІРѕРґ РїР»РѕС‰Р°РґРё
 void input_object(const unsigned n, SquareFig* Squares, unsigned j) {
 	SquareFig mc = Squares[j];
 	mc.set_coordinates(0, 3, 3, 0, 0, -3, -3, 0);
-	cout << mc.to_string() << endl;  //Вывод
+	cout << mc.to_string() << endl;  //Р’С‹РІРѕРґ
 	//????
 }
 
 
-/// Вывод сторон объектов
+/// Р’С‹РІРѕРґ СЃС‚РѕСЂРѕРЅ РѕР±СЉРµРєС‚РѕРІ
 void input_lengts(const unsigned n, SquareFig* Squares) {
 	for (unsigned i = 0; i < n; i++) {
 		cout << Squares[i].side_lengths() << endl;
@@ -53,9 +53,9 @@ void input_lengts(const unsigned n, SquareFig* Squares) {
 }
 
 
-/// Динамический массив из указателей на Class
+/// Р”РёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РёР· СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° Class
 void vec_objects(const unsigned n, vector<SquareFig*>& v) {
-	// добавление объектов в динамический массив
+	// РґРѕР±Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ РІ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 	for (unsigned i = 0; i < n; i++) {
 		SquareFig* mc = new SquareFig();
 		float ax, ay, bx, by, cx, cy, dx, dy;
@@ -69,13 +69,13 @@ void vec_objects(const unsigned n, vector<SquareFig*>& v) {
 		dx = cx;
 		dy = ay;
 		mc->set_coordinates(ax, ay, bx, by, cx, cy, dx, dy);
-		//Squares[i].get_coordinates(); //Вывод
+		//Squares[i].get_coordinates(); //Р’С‹РІРѕРґ
 		v.push_back(mc);
 	}
 }
 
 
-/// Вывод сторон объектов
+/// Р’С‹РІРѕРґ СЃС‚РѕСЂРѕРЅ РѕР±СЉРµРєС‚РѕРІ
 void input_result_objects(const unsigned n, vector<SquareFig*>& v) {
 	for (unsigned i = 0; i < v.size(); i++) {
 		cout << v[i]->to_string() << endl;
@@ -83,7 +83,7 @@ void input_result_objects(const unsigned n, vector<SquareFig*>& v) {
 }
 
 
-/// Освобождение памяти, занимаемой объектами
+/// РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё, Р·Р°РЅРёРјР°РµРјРѕР№ РѕР±СЉРµРєС‚Р°РјРё
 void delete_vec(vector<SquareFig*>& v) {
 	for (unsigned i = 0; i < v.size(); i++) {
 		delete v[i];

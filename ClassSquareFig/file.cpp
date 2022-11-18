@@ -1,25 +1,25 @@
 // @author: Natalya Arsentyeva
 #include "SquareFig.h"
 
-/// Проверка на существование файла
+/// РџСЂРѕРІРµСЂРєР° РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р°
 void check_file(const string filename) {
 	ifstream f(filename);
 	if (!f) throw invalid_argument("file don't exists");
 }
 
-/// заполнение файла данными,  filename - имя файла
+/// Р·Р°РїРѕР»РЅРµРЅРёРµ С„Р°Р№Р»Р° РґР°РЅРЅС‹РјРё,  filename - РёРјСЏ С„Р°Р№Р»Р°
 void write_file(const string& filename, vector<SquareFig*>& v) {
 	ofstream f(filename);
 	SquareFig x;
 	for (int i = 0; i < v.size(); i++) {
 		f << v[i]->to_string_coord();
-		f << endl; 											// записать символ перехода на новую строку
+		f << endl; 											// Р·Р°РїРёСЃР°С‚СЊ СЃРёРјРІРѕР» РїРµСЂРµС…РѕРґР° РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ
 	}
 	f.close();
 }
 
 
-/// Подсчёт строк файла
+/// РџРѕРґСЃС‡С‘С‚ СЃС‚СЂРѕРє С„Р°Р№Р»Р°
 int file_lines_count(const string& filename) {
 	check_file(filename);
 	ifstream f_read(filename);
@@ -33,23 +33,23 @@ int file_lines_count(const string& filename) {
 }
 
 
-/// заполнение массива числами из файла
+/// Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃР»Р°РјРё РёР· С„Р°Р№Р»Р°
 void read_file(const string& filename, vector<SquareFig*>& v,unsigned n2) {
 	check_file(filename);
 	ifstream f_read(filename);
 	string buf;
 	float ax, ay, bx, by, cx, cy, dx, dy;
-	// добавление объектов в динамический массив
+	// РґРѕР±Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ РІ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 	for (unsigned i = 0; i < n2; i++) {
 		SquareFig* mc = new SquareFig();
 		getline(f_read, buf);
+		//Р Р°Р·РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё РЅР° С‡РёСЃР»Р°
 		istringstream ss(buf);
 		float mas[100];
 		unsigned n = 0;
-		while (ss >> mas[n++])
-			;
+		while (ss >> mas[n++]);
 		n--;
-		//ax = stoi(buf); // строка -> число
+		//Р—Р°РїРёСЃСЊ С‡РёСЃРµР» РІ РѕР±СЉРµРєС‚С‹
 		ax = mas[0];
 		ay = mas[1];
 		bx = mas[2];

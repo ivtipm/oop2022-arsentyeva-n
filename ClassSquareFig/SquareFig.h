@@ -9,74 +9,73 @@
 #include "math.h"
 #include <fstream>
 #include <sstream>
-#define _USE_MATH_DEFINES // Вкл. мат. константы
+#define _USE_MATH_DEFINES // Р’РєР». РјР°С‚. РєРѕРЅСЃС‚Р°РЅС‚С‹
 
 using namespace std;
 
 
-/// Фигура квадрат
+/// Р¤РёРіСѓСЂР° РєРІР°РґСЂР°С‚
 class SquareFig
 {
 private:
-	// Координаты точки A(ax,ay), аналогично B, C, D
+	// РљРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё A(ax,ay), Р°РЅР°Р»РѕРіРёС‡РЅРѕ B, C, D
 	float ax, ay, bx, by, cx, cy, dx, dy;
 
 public:
-	// Конструктор (инициализирует поля)
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ (РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РїРѕР»СЏ)
 	SquareFig();
 	SquareFig(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
 
-	///Вывести координаты
-	void get_coordinates() const;
+	///Р’С‹РІРµСЃС‚Рё РєРѕРѕСЂРґРёРЅР°С‚С‹
+	//void get_coordinates() const;
 	std::string to_string_coord() const;
 
-	/// Задать координаты
+	/// Р—Р°РґР°С‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹
 	void set_coordinates(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
 
-	/// Нахождение длины стороны
+	/// РќР°С…РѕР¶РґРµРЅРёРµ РґР»РёРЅС‹ СЃС‚РѕСЂРѕРЅС‹
 	float side_lengths() const;
 
-	/// Нахождение периметра
+	/// РќР°С…РѕР¶РґРµРЅРёРµ РїРµСЂРёРјРµС‚СЂР°
 	float perimeter() const;
 
-	/// Нахождение площади
+	/// РќР°С…РѕР¶РґРµРЅРёРµ РїР»РѕС‰Р°РґРё
 	float area() const;
 
-	/// Перевод значений в строку
+	/// РџРµСЂРµРІРѕРґ Р·РЅР°С‡РµРЅРёР№ РІ СЃС‚СЂРѕРєСѓ
 	std::string to_string() const;
 };
 
 
-/// Динамическое создание объекта
+/// Р”РёРЅР°РјРёС‡РµСЃРєРѕРµ СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р°
 void create_object();
 
-/// Набор из статических объектов
+/// РќР°Р±РѕСЂ РёР· СЃС‚Р°С‚РёС‡РµСЃРєРёС… РѕР±СЉРµРєС‚РѕРІ
 void objects_array(const unsigned n, SquareFig* Squares);
 
-/// Запись отдельного объекта в заданную ячейку из массива в отдельную переменную и вывод площади
+/// Р—Р°РїРёСЃСЊ РѕС‚РґРµР»СЊРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РІ Р·Р°РґР°РЅРЅСѓСЋ СЏС‡РµР№РєСѓ РёР· РјР°СЃСЃРёРІР° РІ РѕС‚РґРµР»СЊРЅСѓСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ Рё РІС‹РІРѕРґ РїР»РѕС‰Р°РґРё
 void input_object(const unsigned n, SquareFig* Squares, unsigned j);
 
-/// Вывод сторон объектов
+/// Р’С‹РІРѕРґ СЃС‚РѕСЂРѕРЅ РѕР±СЉРµРєС‚РѕРІ
 void input_lengts(const unsigned n, SquareFig* Squares);
 
-/// Динамический массив из указателей на Class
+/// Р”РёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РёР· СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° Class
 void vec_objects(const unsigned n, vector<SquareFig*>& v);
 
-/// Вывод сторон объектов
+/// Р’С‹РІРѕРґ СЃС‚РѕСЂРѕРЅ РѕР±СЉРµРєС‚РѕРІ
 void input_result_objects(const unsigned n, vector<SquareFig*>& v);
 
-
-/// Освобождение памяти, занимаемой объектами
+/// РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё, Р·Р°РЅРёРјР°РµРјРѕР№ РѕР±СЉРµРєС‚Р°РјРё
 void delete_vec(vector<SquareFig*>& v);
 
-/// Проверка на существование файла
+/// РџСЂРѕРІРµСЂРєР° РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р°
 void check_file(const string filename);
 
-/// заполнение файла данными,  filename - имя файла
+/// Р·Р°РїРѕР»РЅРµРЅРёРµ С„Р°Р№Р»Р° РґР°РЅРЅС‹РјРё,  filename - РёРјСЏ С„Р°Р№Р»Р°
 void write_file(const string& filename, vector<SquareFig*>& v);
 
-/// Подсчёт строк файла
+/// РџРѕРґСЃС‡С‘С‚ СЃС‚СЂРѕРє С„Р°Р№Р»Р°
 int file_lines_count(const string& filename);
 
-/// заполнение массива числами из файла
+/// Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃР»Р°РјРё РёР· С„Р°Р№Р»Р°
 void read_file(const string& filename, vector<SquareFig*>& v, unsigned n2);

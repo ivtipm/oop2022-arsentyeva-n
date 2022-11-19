@@ -1,14 +1,20 @@
 // @author: Natalya Arsentyeva
-#include <math.h>
 #pragma once
+#include <math.h>
+#include <iostream>
+#include <string>
+
 
 class Figures
 {
 	public:
+		/// Конструктор по умолчанию
 		Figures() { };
-		/// метод нахождения периметра
+
+		/// Нахождение периметра
 		float virtual perimeter() = 0; // абстрактный метод
-		/// метод нахождения площади
-		float virtual area() = 0; // абстрактный метод
+
+		/// Нахождение площади
+		float virtual area() = 0; 
 };
 

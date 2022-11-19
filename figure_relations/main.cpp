@@ -14,7 +14,7 @@ int main(){
 	 /*try{        								// protected code
 	 	
 	}
-    catch (invalid_argument e){  						// Вывод ошибки для пользователя
+    catch (invalid_argument e){  						
        cout << e.what();
     }*/
 }

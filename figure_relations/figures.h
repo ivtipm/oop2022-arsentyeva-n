@@ -17,7 +17,7 @@ class Figures
 		/// Нахождение площади
 		float virtual area() const = 0; 
 
-		/// 
+		/// Преобразование в строку
 		std::string virtual to_string() const = 0;
 };
 

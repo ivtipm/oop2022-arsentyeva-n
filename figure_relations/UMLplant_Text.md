@@ -6,6 +6,7 @@ class Figures
 
    + perimeter():float virtual;
    + area():float virtual;
+   + to_string() const:std::string;
           
 }
 @enduml
@@ -13,7 +14,7 @@ class Figures
 @startuml
 class Triangle
 {
-   # a, b, c: unsigned;  
+   # a, b, c: float;  
 
    + Triangle();
    + Triangle(float a1, float b1, float c1);                         
@@ -22,7 +23,7 @@ class Triangle
    + perimeter():float;
    + area()float;
    + hight():float;
-   + to_string():_string;
+   + to_string() const:std::string;
           
 }
 @enduml
@@ -30,7 +31,7 @@ class Triangle
 @startuml
 class Circle
 {
-   # R: unsigned;
+   # R: float;
 
    + Circle();
    + Circle(float R1);                         
@@ -38,7 +39,8 @@ class Circle
    + set_R(float R1):void ;
    + perimeter():float;
    + area()float;
-   + diameter():float;
+   + diametr():float;
+   + to_string() const:std::string;
           
 }
 @enduml

@@ -3,7 +3,7 @@
 #define M_PI 3.14159265358979323846 
 
 
-/// Конструктор по умолчанию
+/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 Circle::Circle() {
 	R = 0;
 };
@@ -13,17 +13,22 @@ Circle::Circle(float R1) {
 };
 
 
-/// Задать радиус
+/// Р—Р°РґР°С‚СЊ СЂР°РґРёСѓСЃ
 void Circle::set_R(float R1) { 
 	if (R1 <= 0) { throw std::invalid_argument("Error: R are set incorrectly, circle does not exist"); }
 	R = R1; 
 };
 
-/// Найти диаметр
+/// РќР°Р№С‚Рё РґРёР°РјРµС‚СЂ
 float Circle::diametr() const { return 2 * R; };
 
-/// Найти периметр
+/// РќР°Р№С‚Рё РїРµСЂРёРјРµС‚СЂ
 float Circle::perimeter() const { return 2 * R * M_PI; };
 
-/// Найти площадь
+/// РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ
 float Circle::area() const { return R * R * M_PI; };
+
+/// РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ СЃС‚СЂРѕРєСѓ
+std::string Circle::to_string() const {
+	return  "P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2; D =" + std::to_string(diametr()) + " cm";
+};

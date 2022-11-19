@@ -2,31 +2,31 @@
 #pragma once
 #include "figures.h"
 
-/// Фигура треугольник
+/// Р¤РёРіСѓСЂР° С‚СЂРµСѓРіРѕР»СЊРЅРёРє
 class Triangle: public Figures
 {
 	protected:
 	float a,b,c;
 
 	public:
-		/// Конструктор по умолчанию
+		/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		Triangle();
 		Triangle(float a1, float b1, float c1);
 
-		/// Задать стороны
+		/// Р—Р°РґР°С‚СЊ СЃС‚РѕСЂРѕРЅС‹
 		void set_ABC(float a1, float b1, float c1);
 
-		/// Найти периметр
-		float perimeter();
+		/// РќР°Р№С‚Рё РїРµСЂРёРјРµС‚СЂ
+		float perimeter() const;
 
-		/// Найти площадь
-		float area();
+		/// РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ
+		float area() const;
 
-		/// Найти высоту треугольника
-		float hight();
+		/// РќР°Р№С‚Рё РІС‹СЃРѕС‚Сѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
+		float hight() const;
 		
-		/// Преобразование в строку
-		std::string to_string();
+		/// РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ СЃС‚СЂРѕРєСѓ
+		std::string to_string() const;
 };
 
 

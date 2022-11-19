@@ -1,7 +1,7 @@
 // @author: Natalya Arsentyeva
 #pragma once
 #include "figures.h"
-#define _USE_MATH_DEFINES // Вкл. мат. константы
+#define _USE_MATH_DEFINES // Р’РєР». РјР°С‚. РєРѕРЅСЃС‚Р°РЅС‚С‹
 
 class Circle : public Figures
 {
@@ -9,19 +9,22 @@ protected:
 	float R;
 
 public:
-	/// Конструктор по умолчанию
+	/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	Circle();
 	Circle(float R1);
 
-	/// Задать радиус
+	/// Р—Р°РґР°С‚СЊ СЂР°РґРёСѓСЃ
 	void set_R(float R1);
 
-	/// Найти диаметр
+	/// РќР°Р№С‚Рё РґРёР°РјРµС‚СЂ
 	float diametr() const;
 
-	/// Найти периметр
+	/// РќР°Р№С‚Рё РїРµСЂРёРјРµС‚СЂ
 	float perimeter() const;
 
-	/// Найти площадь
+	/// РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ
 	float area() const;
+
+	/// РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ СЃС‚СЂРѕРєСѓ
+	std::string to_string() const;
 };

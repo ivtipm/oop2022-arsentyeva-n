@@ -12,9 +12,12 @@ class Figures
 		Figures() { };
 
 		/// Нахождение периметра
-		float virtual perimeter() = 0; // абстрактный метод
+		float virtual perimeter() const = 0; // абстрактный метод
 
 		/// Нахождение площади
-		float virtual area() = 0; 
+		float virtual area() const = 0; 
+
+		/// 
+		std::string virtual to_string() const = 0;
 };
 

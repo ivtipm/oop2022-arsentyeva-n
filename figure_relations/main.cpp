@@ -15,9 +15,9 @@ int main(){
 	srand(time(0));
 	// protected code
 	try{       
-		Triangle* triangle1 = new Triangle(); // triangle1 - óêàçàòåëü íà îáúåêò
+		Triangle* triangle1 = new Triangle(); // triangle1 - ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ Ð½Ð° Ð¾Ð±ÑŠÐµÐºÑ‚
 
-	// îáðàùåíèå ê ïîëÿì
+	// Ð¾Ð±Ñ€Ð°Ñ‰ÐµÐ½Ð¸Ðµ Ðº Ð¿Ð¾Ð»ÑÐ¼
 		triangle1->set_ABC(2, 3, 4);
 		cout << triangle1->to_string() << endl;
 		delete triangle1;

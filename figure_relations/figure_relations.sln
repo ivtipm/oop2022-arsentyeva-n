@@ -7,8 +7,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "figure_relations", "figure_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{F1227205-B11A-445D-9DC6-5112DECD14DA}"
 	ProjectSection(SolutionItems) = preProject
+		circle.cpp = circle.cpp
+		circle.h = circle.h
+		figures.cpp = figures.cpp
+		figures.h = figures.h
 		main.cpp = main.cpp
+		triangle.cpp = triangle.cpp
+		triangle.h = triangle.h
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E367532E-E59D-4DDA-8E78-22319774F790}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

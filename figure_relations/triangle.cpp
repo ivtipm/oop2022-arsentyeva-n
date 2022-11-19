@@ -25,14 +25,14 @@ float Triangle::perimeter() { return a + b + c; };
 /// Найти площадь
 float Triangle::area() { 
 	float p;
-	p = (a + b + c) / 2;
+	p = (a + b + c) / 2.0;
 	return sqrt(p * (p - a) * (p - b) * (p - c)); };
 
 /// Найти высоту треугольника
 float Triangle::hight() {
 	float s;
 	s = area();
-	return 2 * s / a;
+	return 2 * s / c;
 };
 
 /// Преобразование в строку

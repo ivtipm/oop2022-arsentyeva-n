@@ -20,10 +20,10 @@ void Circle::set_R(float R1) {
 };
 
 /// Найти диаметр
-float Circle::diametr() { return 2 * R; };
+float Circle::diametr() const { return 2 * R; };
 
 /// Найти периметр
-float Circle::perimeter() { return 2 * R * M_PI; };
+float Circle::perimeter() const { return 2 * R * M_PI; };
 
 /// Найти площадь
-float Circle::area() { return R * R * M_PI; };
+float Circle::area() const { return R * R * M_PI; };

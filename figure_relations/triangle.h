@@ -6,7 +6,7 @@
 class Triangle: public Figures
 {
 	protected:
-		unsigned a,b,c;
+	float a,b,c;
 
 	public:
 		/// Конструктор по умолчанию

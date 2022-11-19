@@ -6,7 +6,7 @@
 class Circle : public Figures
 {
 protected:
-	unsigned R;
+	float R;
 
 public:
 	/// Конструктор по умолчанию
@@ -17,11 +17,11 @@ public:
 	void set_R(float R1);
 
 	/// Найти диаметр
-	float diametr();
+	float diametr() const;
 
 	/// Найти периметр
-	float perimeter();
+	float perimeter() const;
 
 	/// Найти площадь
-	float area();
+	float area() const;
 };

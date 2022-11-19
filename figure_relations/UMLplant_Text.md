@@ -1,5 +1,5 @@
- `
- @startuml
+```
+@startuml
 class Figures
 {
    + Figures();                         
@@ -47,5 +47,4 @@ class Circle
 Figures <|-- Triangle
 Figures <|-- Circle
 @enduml
-
-`
+```

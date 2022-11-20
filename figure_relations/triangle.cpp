@@ -37,5 +37,5 @@ float Triangle::hight() const{
 
 /// Преобразование в строку
 std::string Triangle::to_string() const {
-	return  "P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2; h = " + std::to_string(hight()) + " cm";
+	return  "a = " + std::to_string(a) + "; b = " + std::to_string(b) + "; c = " + std::to_string(c) + "; P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2; h = " + std::to_string(hight()) + " cm";
 };

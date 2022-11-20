@@ -30,5 +30,5 @@ float Circle::area() const { return R * R * M_PI; };
 
 /// Преобразование в строку
 std::string Circle::to_string() const {
-	return  "P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2; D =" + std::to_string(diametr()) + " cm";
+	return   "R = " + std::to_string(R) + "; P = " + std::to_string(perimeter()) + " cm; S = " + std::to_string(area()) + " cm2; D = " + std::to_string(diametr()) + " cm";
 };

@@ -16,6 +16,11 @@ class Triangle: public Figures
 		/// Задать стороны
 		void set_ABC(float a1, float b1, float c1);
 
+		/// Вывести стороны
+		float get_a() const;
+		float get_b() const;
+		float get_c() const;
+
 		/// Найти периметр
 		float perimeter() const;
 
@@ -23,7 +28,11 @@ class Triangle: public Figures
 		float area() const;
 
 		/// Найти высоту треугольника
-		float hight() const;
+		float hightC() const;
+
+		float hightA() const;
+
+		float hightB() const;
 		
 		/// Преобразование в строку
 		std::string to_string() const;

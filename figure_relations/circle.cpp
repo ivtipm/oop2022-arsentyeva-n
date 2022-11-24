@@ -1,6 +1,6 @@
 // @author: Natalya Arsentyeva
 #include "circle.h"
-#define M_PI 3.14159265358979323846 
+#define M_PI 3.14159265358979323846 // ?
 
 
 /// Конструктор по умолчанию
@@ -18,6 +18,9 @@ void Circle::set_R(float R1) {
 	if (R1 <= 0) { throw std::invalid_argument("Error: R are set incorrectly, circle does not exist"); }
 	R = R1; 
 };
+
+/// Вывести радиус
+float Circle::set_R() const { return R; };
 
 /// Найти диаметр
 float Circle::diametr() const { return 2 * R; };

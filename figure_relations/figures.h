@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-
+/// Абстрактная фигура
 class Figures
 {
 	public:
@@ -12,7 +12,7 @@ class Figures
 		Figures() { };
 
 		/// Нахождение периметра
-		float virtual perimeter() const = 0; // абстрактный метод
+		float virtual perimeter() const = 0; // абстрактные методы
 
 		/// Нахождение площади
 		float virtual area() const = 0; 

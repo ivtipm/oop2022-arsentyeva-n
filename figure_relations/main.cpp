@@ -25,7 +25,7 @@ int main(){
 		cout << endl;
 
 		unsigned n = 5;
-		vector<Figures*> fig(5); // Вектор из объектов Figures
+		vector<Figures*> fig(n); // Вектор из объектов Figures
 		// Добавление объектов Triangle в вектор
 		for (unsigned i = 0; i < n; i++) {
 			float a, b, c;

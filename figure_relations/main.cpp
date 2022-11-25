@@ -51,12 +51,12 @@ int main(){
 			P += s->perimeter();
 		}
 
+		cout << "\nP = " << P;
+
 		// Освобождение памяти, занимаемой объектами
 		for (unsigned i = 0; i < fig.size(); i++) {
 			delete fig[i];
 		}		
-
-		cout << "\nP = " << P;
 	}
     catch (invalid_argument e){  						
        cout << e.what();

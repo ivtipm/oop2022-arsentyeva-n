@@ -28,11 +28,11 @@ class Triangle: public Figures
 		float area() const;
 
 		/// Найти высоту треугольника
-		float hightC() const;
-
 		float hightA() const;
 
 		float hightB() const;
+
+		float hightC() const;
 		
 		/// Преобразование в строку
 		std::string to_string() const;

@@ -43,14 +43,14 @@ float Triangle::hightC() const{
 	return 2 * s / c; 
 };
 
-/// Найти высоту треугольника на сторону с
+/// Найти высоту треугольника на сторону a
 float Triangle::hightA() const {
 	float s;
 	s = area();
 	return 2 * s / a;
 };
 
-/// Найти высоту треугольника на сторону с
+/// Найти высоту треугольника на сторону b
 float Triangle::hightB() const {
 	float s;
 	s = area();

@@ -19,7 +19,7 @@ public:
 	void set_R(float R1);
 
 	/// Вывести радиус
-	float set_R() const;
+	float get_R() const;
 
 	/// Найти диаметр
 	float diametr() const;

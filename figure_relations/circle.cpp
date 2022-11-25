@@ -20,7 +20,7 @@ void Circle::set_R(float R1) {
 };
 
 /// Вывести радиус
-float Circle::set_R() const { return R; };
+float Circle::get_R() const { return R; };
 
 /// Найти диаметр
 float Circle::diametr() const { return 2 * R; };

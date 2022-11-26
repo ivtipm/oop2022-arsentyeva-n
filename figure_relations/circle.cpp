@@ -1,6 +1,8 @@
 // @author: Natalya Arsentyeva
 #include "circle.h"
-#define M_PI 3.14159265358979323846 // ?
+#include <numbers>
+
+using std::numbers::pi;
 
 
 /// Конструктор по умолчанию
@@ -26,10 +28,10 @@ float Circle::get_R() const { return R; };
 float Circle::diametr() const { return 2 * R; };
 
 /// Найти периметр
-float Circle::perimeter() const { return 2 * R * M_PI; };
+float Circle::perimeter() const { return 2 * R * pi; };
 
 /// Найти площадь
-float Circle::area() const { return R * R * M_PI; };
+float Circle::area() const { return R * R * pi; };
 
 /// Преобразование в строку
 std::string Circle::to_string() const {

@@ -1,7 +1,6 @@
 // @author: Natalya Arsentyeva
 #pragma once
 #include "figures.h"
-#define _USE_MATH_DEFINES // Вкл. мат. константы
 
 
 // Окружность

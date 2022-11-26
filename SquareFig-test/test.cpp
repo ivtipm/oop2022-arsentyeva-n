@@ -4,7 +4,7 @@
 #include <stdexcept>
 
 
-/// Тест на вычисление сторон
+/// РўРµСЃС‚ РЅР° РІС‹С‡РёСЃР»РµРЅРёРµ СЃС‚РѕСЂРѕРЅ
 TEST(TestClassSquareFig, TestSideLen) {
 	SquareFig f1(2, 2, 2, 6, -2, 6, -2, 2);
 	EXPECT_EQ(f1.side_lengths(), 4);
@@ -14,7 +14,7 @@ TEST(TestClassSquareFig, TestSideLen) {
 }
 
 
-/// Тест на вычисление периметра
+/// РўРµСЃС‚ РЅР° РІС‹С‡РёСЃР»РµРЅРёРµ РїРµСЂРёРјРµС‚СЂР°
 TEST(TestClassSquareFig, TestPerimetr) {
 	SquareFig f(5, 3, 2.5, 3, 2.5, 0.5, 5, 0.5);
 	EXPECT_EQ(f.perimeter(), 10);
@@ -24,7 +24,7 @@ TEST(TestClassSquareFig, TestPerimetr) {
 }
 
 
-/// Тест на вычисление площади
+/// РўРµСЃС‚ РЅР° РІС‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
 TEST(TestClassSquareFig, TestArea) {
 	SquareFig f(0, 3, 3, 0, 0, -3, -3, 0);
 	EXPECT_EQ(f.area(), 18);
@@ -34,7 +34,7 @@ TEST(TestClassSquareFig, TestArea) {
 }
 
 
-/// Тест на преобразование в строку
+/// РўРµСЃС‚ РЅР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ СЃС‚СЂРѕРєСѓ
 TEST(TestClassSquareFig, TestString) {
 	SquareFig f(5, 3, 2.5, 3, 2.5, 0.5, 5, 0.5);
 	EXPECT_EQ(f.to_string(), "lengths side = 2.500000 cm; P = 10.000000 cm; S = 6.250000 cm2");
@@ -42,7 +42,7 @@ TEST(TestClassSquareFig, TestString) {
 
 
 
-// Тест на бросание исключения
+// РўРµСЃС‚ РЅР° Р±СЂРѕСЃР°РЅРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
 TEST(TestClassSquareFig, TestExp) {
 	SquareFig f3;
 	try {

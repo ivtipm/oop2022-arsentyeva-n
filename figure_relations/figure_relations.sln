@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E367532E-E59D-4DDA-8E78-22319774F790}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FigureRelation-Test", "..\FigureRelation-Test\FigureRelation-Test.vcxproj", "{07EF405A-4BD2-454E-934D-C60C596FEDBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -34,6 +36,14 @@ Global
 		{29605100-13F7-472E-A8B2-7D0F285719BD}.Release|x64.Build.0 = Release|x64
 		{29605100-13F7-472E-A8B2-7D0F285719BD}.Release|x86.ActiveCfg = Release|Win32
 		{29605100-13F7-472E-A8B2-7D0F285719BD}.Release|x86.Build.0 = Release|Win32
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Debug|x64.ActiveCfg = Debug|x64
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Debug|x64.Build.0 = Debug|x64
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Debug|x86.ActiveCfg = Debug|Win32
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Debug|x86.Build.0 = Debug|Win32
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Release|x64.ActiveCfg = Release|x64
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Release|x64.Build.0 = Release|x64
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Release|x86.ActiveCfg = Release|Win32
+		{07EF405A-4BD2-454E-934D-C60C596FEDBA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

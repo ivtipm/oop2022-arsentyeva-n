@@ -19,7 +19,7 @@ int main(){
 		// Создание динамического объекта
 		Triangle* triangle1 = new Triangle(); // triangle1 - указатель на объект
 		// обращение к полям
-		triangle1->set_ABC(2, 3, 4);
+		triangle1->set_ABC(3, 4, 5);
 		cout << triangle1->to_string() << endl;
 		delete triangle1;
 		cout << endl;
@@ -32,7 +32,8 @@ int main(){
 			a = rand() % (10 - 5 + 1) + 5;
 			b = rand() % (10 - 5 + 1) + 5;
 			c = rand() % (10 - 5 + 1) + 5;
-			Triangle* s = new Triangle(a,b,c);
+			Triangle* s = new Triangle();
+			s->set_ABC(a, b, c);
 			fig[i] = s;
 		}
 		// Добавление объектов Circle

@@ -13,7 +13,7 @@ Triangle::Triangle(float a1, float b1, float c1) {
 
 /// Задать стороны
 void Triangle::set_ABC(float a1, float b1, float c1) {
-	if ((a1 <= 0) || (b1 <= 0) || (c1<=0) || (a1 + b1 < c1) || (a1 + c1 < b1) || (c1 + b1 < a1))  { 
+	if ((a1 <= 0) || (b1 <= 0) || (c1<=0) || (a1 + b1 <= c1) || (a1 + c1 <= b1) || (c1 + b1 <= a1))  { 
 		throw std::invalid_argument("Error: sides are set incorrectly, triangle does not exist"); }
 	a = a1;
 	b = b1;

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 
+
 /// Абстрактная фигура
 class Figures
 {

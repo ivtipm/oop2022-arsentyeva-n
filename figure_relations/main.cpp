@@ -29,7 +29,7 @@ int main(){
 		// Добавление объектов Triangle в вектор
 		for (unsigned i = 0; i < n; i++) {
 			float a, b, c;
-			a = rand() % (10 - 5 + 1) + 5;
+			a = rand() % 10;
 			b = rand() % (10 - 5 + 1) + 5;
 			c = rand() % (10 - 5 + 1) + 5;
 			Triangle* s = new Triangle();
@@ -38,7 +38,7 @@ int main(){
 		}
 		// Добавление объектов Circle
 		for (unsigned i = 0; i < n; i++) {
-			fig.push_back(new Circle(rand() % 50 + 1));
+			fig.push_back(new Circle(rand() % 10 + 1));
 		}
 		// Вывод объектов
 		for (unsigned i = 0; i < fig.size(); i++) {

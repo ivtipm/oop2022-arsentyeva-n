@@ -1,11 +1,15 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+/// @author Арсентьева Н. В.
 
-#include <QMainWindow>
+#ifndef MAINWINDOW_H                        //
+#define MAINWINDOW_H                        //
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+#include <QMainWindow>                      //
+
+QT_BEGIN_NAMESPACE                          //
+namespace Ui { class MainWindow; }          //
+QT_END_NAMESPACE                            //
+
+
 
 class MainWindow : public QMainWindow
 {
@@ -20,5 +24,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    // data
+
+
+    // com
 };
+
+
 #endif // MAINWINDOW_H

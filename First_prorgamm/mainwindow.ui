@@ -74,7 +74,6 @@
     </property>
     <property name="font">
      <font>
-      <family>Helvetica Light</family>
       <pointsize>20</pointsize>
      </font>
     </property>
@@ -93,7 +92,6 @@
     </property>
     <property name="font">
      <font>
-      <family>Helvetica Light</family>
       <pointsize>20</pointsize>
      </font>
     </property>
@@ -112,7 +110,6 @@
     </property>
     <property name="font">
      <font>
-      <family>Helvetica Light</family>
       <pointsize>20</pointsize>
      </font>
     </property>
@@ -131,7 +128,6 @@
     </property>
     <property name="font">
      <font>
-      <family>Helvetica Light</family>
       <pointsize>20</pointsize>
      </font>
     </property>
@@ -161,15 +157,14 @@
    <widget class="QLabel" name="label_resultR">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>470</x>
       <y>270</y>
-      <width>121</width>
+      <width>181</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Helvetica Light</family>
       <pointsize>20</pointsize>
      </font>
     </property>
@@ -180,15 +175,14 @@
    <widget class="QLabel" name="label_resultB">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>470</x>
       <y>220</y>
-      <width>121</width>
+      <width>181</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Helvetica Light</family>
       <pointsize>20</pointsize>
      </font>
     </property>
@@ -203,7 +197,7 @@
      <x>0</x>
      <y>0</y>
      <width>680</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

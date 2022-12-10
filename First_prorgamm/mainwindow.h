@@ -24,9 +24,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    // data
-
-
+    float a, b, c, R;
     // com
 };
 

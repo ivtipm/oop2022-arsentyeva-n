@@ -21,7 +21,6 @@ MainWindow::~MainWindow()
 /// Кнопка "вычислить"
 void MainWindow::on_pushButton_calc_clicked()
 {
-    float a, b = 0, c, R = 0;
     a = ui->lineEdit_firstCathetus->text().toFloat();          // Обращение к содержимому поля ввода
     c = ui->lineEdit_hypotenuse->text().toFloat();
     b = calc_katet(a, c);                                      // Вычисление 2 катета

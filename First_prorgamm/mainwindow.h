@@ -1,31 +1,35 @@
 /// @author Арсентьева Н. В.
 
-#ifndef MAINWINDOW_H                        //
-#define MAINWINDOW_H                        //
+#ifndef MAINWINDOW_H                        // Защита от повторного подключения заголовочных файлов
+#define MAINWINDOW_H
 
-#include <QMainWindow>                      //
+#include <QMainWindow>                      // Библиотека для окна
 
-QT_BEGIN_NAMESPACE                          //
-namespace Ui { class MainWindow; }          //
-QT_END_NAMESPACE                            //
+QT_BEGIN_NAMESPACE                          // Определение UI-класса наперёд, чтобы визуальное редактирование не приводило
+namespace Ui { class MainWindow; }          // к крупным перекомпиляциям (Определение класса наперёд не мешает писать указатели и ссылки.)
+QT_END_NAMESPACE
 
 
-
+/// Класс формы
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+    Q_OBJECT                                //  Данный макрос используется в классах QT для связывания сигналов и слотов. (Макрос, который добавляет файл в компиляцию MOC’ом.)
+    //Moc — это один из инструментов разработчика и часть библиотеки Qt.
+    //Его задача — поддерживать расширение языка С++, необходимое для интроспекции
+    //и рефлексии в Qt (сюда относятся сигналы, слоты и QML)
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    MainWindow(QWidget *parent = nullptr);  // Конструктор, инициализация окна, передача параметров в родительский класс
+    ~MainWindow();                          // Деструктор удаления указателя на окно
 
-private slots:
-    void on_pushButton_calc_clicked();
+private slots:                              // Недоступные обработчики событий,  Слоты — фишка Qt, которая обрабатывается MOC’ом
+    void on_pushButton_calc_clicked();      // обраюотчик событий "Вычислить"
+
+    void on_action_triggered();             // обраюотчик союытий в подменю "о разработчике"
 
 private:
-    Ui::MainWindow *ui;
-    float a, b, c, R;
-    // com
+    Ui::MainWindow *ui;                     // Указатель на UI
+    float a, b, c, R;                       // a, b - катеты, c - гипотенуза, R - радиус вписанной окружности
 };
 
 

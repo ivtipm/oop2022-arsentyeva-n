@@ -6,8 +6,8 @@
 
 /// Прямоугольный треугольник
 class Triangle{
-    float a, b;        /// Катеты
-    float c;           /// Гипотенуза
+    float a;        /// Катет
+    float c;        /// Гипотенуза
 
 public:
 

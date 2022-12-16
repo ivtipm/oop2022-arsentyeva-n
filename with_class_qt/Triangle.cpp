@@ -28,19 +28,17 @@ void Triangle::setC(float newC){
 
 /// вычисление второго катета прямоугольного треугольника a - первый катет, с гипотенуза
 float Triangle::calc_b(){
-    b = sqrt(c*c-a*a);
-    return b;
+    return sqrt(c*c-a*a);
 }
 
 /// вычисление вписанной окружности в прямоугольный треугольник, a - катет, b - вычисляемый катет, c - гипотенуза
 float Triangle::calc_r() {
-    return (a+b-c)/2;
+    return (a+calc_b()-c)/2;
 }
 
 Triangle::Triangle()
 {
     a = 0;
-    b = 0;
     c = 0;
 }
 

@@ -25,7 +25,7 @@ public:
 private slots:                              // Недоступные обработчики событий,  Слоты — фишка Qt, которая обрабатывается MOC’ом
     void on_pushButton_calc_clicked();      // обраюотчик событий "Вычислить"
 
-    void on_action_triggered();             // обраюотчик союытий в подменю "о разработчике"
+    void on_action_triggered();             // обработчик событий в подменю "о разработчике"
 
 private:
     Ui::MainWindow *ui;                     // Указатель на UI

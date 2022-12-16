@@ -26,6 +26,8 @@ void MainWindow::on_pushButton_calc_clicked()
         t.setA( ui->lineEdit_firstCathetus->text().toFloat());  // Обращение к содержимому поля ввода
         t.setC( ui->lineEdit_hypotenuse->text().toFloat());
 
+        ui->lineEdit_firstCathetus->setStyleSheet("background-color: white"); // Задает цвет поля белый
+        ui->lineEdit_hypotenuse->setStyleSheet("background-color: white");
         ui->statusbar->clearMessage(); //
 
         // Вычисления
@@ -41,7 +43,8 @@ void MainWindow::on_pushButton_calc_clicked()
 
     }  catch (const std::invalid_argument &e) {
         ui->statusbar->showMessage( "Error" );
-        // todo:
+        ui->lineEdit_firstCathetus->setStyleSheet("background-color: red"); // Меняет цвет lineEdit на красный в случае исключения
+        ui->lineEdit_hypotenuse->setStyleSheet("background-color: red");
     }
 
 }

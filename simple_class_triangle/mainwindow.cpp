@@ -53,7 +53,7 @@ void MainWindow::on_pushButton_calc_clicked()
 
     }  catch (const std::invalid_argument &e) {
         ui->statusbar->showMessage( "Error" );
-        ui->plainTextEdit_report->setStyleSheet("background-color: red"); // Меняет цвет lineEdit на красный в случае исключения
+        ui->plainTextEdit_report->setStyleSheet("background-color: rgb(255, 120, 122);"); // Меняет цвет lineEdit на красный в случае исключения
         ui->plainTextEdit_report->appendPlainText( "Square don't exist");
     }
 }

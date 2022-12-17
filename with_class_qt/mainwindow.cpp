@@ -41,10 +41,18 @@ void MainWindow::on_pushButton_calc_clicked()
                                                           QString::number(t.calc_r(),'f', 3 )
                                                           );
 
-    }  catch (const std::invalid_argument &e) {
-        ui->statusbar->showMessage( "Error" );
-        ui->lineEdit_firstCathetus->setStyleSheet("background-color: red"); // Меняет цвет lineEdit на красный в случае исключения
-        ui->lineEdit_hypotenuse->setStyleSheet("background-color: red");
+    }  catch (const std::invalid_argument &e ) {
+        if (!(QString::compare(e.what(),"Error a",Qt::CaseInsensitive ))) {
+            ui->statusbar->showMessage( "Error" );
+            ui->plainTextEdit_report->appendPlainText(e.what());
+            ui->lineEdit_hypotenuse->setStyleSheet("background-color: white");
+            ui->lineEdit_firstCathetus->setStyleSheet("background-color: rgb(255, 120, 122);"); // Меняет цвет lineEdit на красный в случае исключения
+        }
+        else if (!(QString::compare(e.what(),"Error c",Qt::CaseInsensitive ))) {
+            ui->statusbar->showMessage( "Error" );
+            ui->plainTextEdit_report->appendPlainText(e.what());
+            ui->lineEdit_hypotenuse->setStyleSheet("background-color: rgb(255, 120, 122);");
+        }
     }
 
 }

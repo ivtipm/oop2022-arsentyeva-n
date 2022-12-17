@@ -33,7 +33,8 @@ void SquareFig::set_coordinates(float x1, float y1, float x2, float y2, float x3
 	d1 = pow((x3 - x1), 2) + pow((y3 - y1), 2);
 	d2 = pow((x4 - x2), 2) + pow((y4 - y2), 2);
 	// Проверка на квадрат
-    if ((fabs(s1 - s2) > FLT_EPSILON) || (fabs(s1 - s3) > FLT_EPSILON) || (fabs(s1 - s4) > FLT_EPSILON) || (fabs(d1 - d2) > FLT_EPSILON)) throw std::invalid_argument("Error: sides are set incorrectly, square does not exist");
+    if ((fabs(s1 - s2) > FLT_EPSILON) || (fabs(s1 - s3) > FLT_EPSILON) || (fabs(s1 - s4) > FLT_EPSILON) || (fabs(d1 - d2) > FLT_EPSILON))
+        throw std::invalid_argument("Error: sides are set incorrectly, square does not exist");
 	ax = x1;
 	ay = y1;
 	bx = x2;

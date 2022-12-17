@@ -23,7 +23,7 @@ public:
     ~MainWindow();                          // Деструктор удаления указателя на окно
 
 private slots:                              // Недоступные обработчики событий,  Слоты — фишка Qt, которая обрабатывается MOC’ом
-    void on_pushButton_calc_clicked();      // обраюотчик событий "Вычислить"
+    void on_pushButton_calc_clicked();      // обработчик событий "Вычислить"
 
     void on_action_triggered();             // обработчик событий в подменю "о разработчике"
 

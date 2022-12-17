@@ -10,7 +10,7 @@ float Triangle::getA() const{
 
 void Triangle::setA(float newA){
     if (newA <= 0)
-        throw std::invalid_argument("");
+        throw std::invalid_argument("Error a");
     a = newA;
 }
 
@@ -22,18 +22,18 @@ float Triangle::getC() const{
 
 void Triangle::setC(float newC){
     if (newC <= 0 || newC <= a)
-        throw std::invalid_argument("");
+        throw std::invalid_argument("Error c");
     c = newC;
 }
 
 /// вычисление второго катета прямоугольного треугольника a - первый катет, с гипотенуза
 float Triangle::calc_b(){
-    return sqrt(c*c-a*a);
+    return sqrt(c * c - a * a);
 }
 
 /// вычисление вписанной окружности в прямоугольный треугольник, a - катет, b - вычисляемый катет, c - гипотенуза
 float Triangle::calc_r() {
-    return (a+calc_b()-c)/2;
+    return (a + calc_b() - c) / 2;
 }
 
 Triangle::Triangle()

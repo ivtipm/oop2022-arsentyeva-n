@@ -24,10 +24,6 @@ private slots:
 
     void on_pushButton_clean_clicked();
 
-    void on_action_save_file_triggered();
-
-    void on_action_open_file_triggered();
-
 private:
     Ui::MainWindow *ui;
     SquareFig square1;

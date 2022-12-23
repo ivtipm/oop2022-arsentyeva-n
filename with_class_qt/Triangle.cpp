@@ -21,8 +21,8 @@ float Triangle::getC() const{
 
 
 void Triangle::setC(float newC){
-    if (newC <= 0 || newC <= a)
-        throw std::invalid_argument("Error c");
+    if (newC <= 0 ) throw std::invalid_argument("Error c");
+    else if (newC <= a) throw std::invalid_argument("Error a > c");
     c = newC;
 }
 

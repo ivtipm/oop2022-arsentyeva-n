@@ -53,6 +53,11 @@ void MainWindow::on_pushButton_calc_clicked()
             ui->plainTextEdit_report->appendPlainText(e.what());
             ui->lineEdit_hypotenuse->setStyleSheet("background-color: rgb(255, 120, 122);");
         }
+                else if (!(QString::compare(e.what(),"Error a > c",Qt::CaseInsensitive ))) {
+                    ui->statusbar->showMessage( "Error a > c" );
+                    ui->plainTextEdit_report->appendPlainText(e.what());
+                    ui->lineEdit_firstCathetus->setStyleSheet("background-color: rgb(255, 120, 122);");
+                    ui->lineEdit_hypotenuse->setStyleSheet("background-color: rgb(255, 120, 122);"); }
     }
 
 }
